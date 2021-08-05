@@ -1,0 +1,2 @@
+list_of_players={'Giulio': {'race': 'Human', 'level': 0, 'stats': {'phy': 10, 'str': 10, 'agl': 10, 'int': 10, 'teq': 10}}, 'Raphael': {'race': 'Elf', 'level': 0, 'stats': {'phy': 10, 'str': 10, 'agl': 10, 'int': 10, 'teq': 10}}, 'Esc': {'race': 'Elf', 'level': 0, 'stats': {'phy': 10, 'str': 10, 'agl': 10, 'int': 10, 'teq': 10}}}
+list_of_monsters={}

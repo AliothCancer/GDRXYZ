@@ -10,7 +10,7 @@ from rich import print
 
 # Display options and return the option if selected with enter key
 # use up and down arrows or w,s keys to move selector. 
-def MenuSelector(Title,list_of_options): 
+def MenuSelector(Title,list_of_options,clear="on"): 
     Selected = False
     selector = 0
     menu = Title
@@ -18,13 +18,13 @@ def MenuSelector(Title,list_of_options):
         Title = menu
         for index,option in enumerate(list_of_options):
             if selector == index:
-                Title+="\n>>> "+ option
+                Title+="\n\n\t\t>>> "+ option
             else:
-                Title+= "\n    "+option
+                Title+= "\n\n\t\t    "+option
         
         # print the new output
         print(Title)
-        command = readchar.readkey()
+        command = readchar.readkey().lower()
 
         # LOGIC FOR UP AND DOWN
         if command == "\x1b\x1b":
@@ -41,7 +41,8 @@ def MenuSelector(Title,list_of_options):
             Selected = True
         
         #clear the old output
-        system("clear")
+        if clear == "on":
+            system("clear")
 
         if Selected:
             break
